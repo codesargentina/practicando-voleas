@@ -1,6 +1,5 @@
 // funciona espectacular
 
-
 // --- Configuración del juego ---
 const canvas = document.getElementById('juegoCanvas');
 const ctx = canvas.getContext('2d');
@@ -39,11 +38,14 @@ const pelota = {
 let estadoJuego = "PAUSADO";
 
 const velocidades = [
-    { nombre: "Nivel 1", valor: 14.0 },
-    { nombre: "Nivel 2", valor: 18.0 },
-    { nombre: "Nivel 3", valor: 20.0 },
-    { nombre: "Nivel 4", valor: 22.0 },
-    { nombre: "Nivel 5", valor: 24.0 }
+    { nombre: "Nivel 1", valor: 10.0 },
+    { nombre: "Nivel 2", valor: 12.0 },
+    { nombre: "Nivel 3", valor: 14.0 },
+    { nombre: "Nivel 4", valor: 16.0 },
+    { nombre: "Nivel 5", valor: 18.0 },
+    { nombre: "Nivel 6", valor: 20.0 },
+    { nombre: "Nivel 7", valor: 22.0 },
+    { nombre: "Nivel 8", valor: 24.0 }
 ];
 let velocidadActualIndice = 0;
 let contadorGolpes = 0;
@@ -135,7 +137,7 @@ function dibujarJuego() {
     ctx.closePath();
 
     // Dibuja el título y el contador
-    dibujarTexto("Practicando Voleas", "36px sans-serif", BLANCO, 20, 50, 'left');
+    dibujarTexto("Practicando Voleas By JM", "18px sans-serif", BLANCO, 20, 30, 'left');
     dibujarTexto(`Golpes: ${contadorGolpes}`, "36px sans-serif", BLANCO, ANCHO_PANTALLA - 20, 50, 'right');
 }
 
@@ -177,3 +179,5 @@ reiniciarBtn.addEventListener('click', () => {
 
 // Iniciar el bucle de animación
 buclePrincipal();
+
+
